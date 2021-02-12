@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-800">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a7e31b3e3e.js" crossorigin="anonymous"></script>
+</head>
+<body class="min-h-screen min-w-full bg-white p-2 flex rounded-2xl">
+    <div class="flex justify-between p-3 min-h-full w-full rounded-2xl bg-background">
+
+        <nav class="min-h-full w-1/5 rounded-2xl shadow-soft-hardSagging">
+            <div class="lateral h-1/2 flex flex-col justify-around items-end">
+                <a class="w-20 h-20 mx-auto mt-2 rounded-full hover:shadow-soft-hardSagging text-textColor text-center" href=""><i class=""></i></a>
+                <a class="w-56 h-12 pl-8 pt-3 rounded-full rounded-r-none text-lg hover:shadow-soft-planeHover hover:bg-background focus:shadow-soft-sagging text-gray-500 hover:text-textColor flex font-muli" href=""><i class="fas fa-home text-center mt-1 text-gray-500"></i> &nbsp; &nbsp; Home</a>
+                <a class="w-56 h-12 pl-8 pt-3 rounded-full rounded-r-none text-lg hover:shadow-soft-planeHover hover:bg-background focus:shadow-soft-sagging text-gray-500 hover:text-textColor flex font-muli" href=""><i class="fas fa-concierge-bell mt-1 text-gray-500"></i> &nbsp; &nbsp; Servicios</a>
+                <a class="w-56 h-12 pl-8 pt-3 rounded-full rounded-r-none text-lg hover:shadow-soft-planeHover hover:bg-background focus:shadow-soft-sagging text-gray-500 hover:text-textColor flex font-muli" href=""><i class="far fa-list-alt mt-1 text-gray-500"></i> &nbsp; &nbsp; Planes</a>
+                <a class="w-56 h-12 pl-8 pt-3 rounded-full rounded-r-none text-lg hover:shadow-soft-planeHover hover:bg-background focus:shadow-soft-sagging text-gray-500 hover:text-textColor flex font-muli" href=""><i class="fas fa-users mt-1 text-gray-500"></i> &nbsp; &nbsp; Nosotros</a>
+                <a class="w-56 h-12 pl-8 pt-3 rounded-full rounded-r-none text-lg hover:shadow-soft-planeHover hover:bg-background focus:shadow-soft-sagging text-gray-500 hover:text-textColor flex font-muli" href=""><i class="fas fa-sliders-h mt-1 text-gray-500"></i> &nbsp; &nbsp; Ajustes</a>
+            </div>
+
+            <div class="h-1/2 w-full flex flex-col justify-around items-center">
+                <div class="mt-8 h-5/12 w-3/4 rounded-2xl shadow-soft-hardSagging">
+
+                </div>
+                <div class="rounded-xl w-3/4 hover:shadow-none text-gray-700 flex">
+                    <a href="" class="p-3 px- w-1/2 text-center rounded-xl rounded-r-none text-gray-700 hover:shadow-soft-plane focus:shadow-soft-sagging font-muli">Sign Up</a>
+                    <a href="" class="p-3 px- w-1/2 text-center rounded-xl rounded-l-none text-gray-700 hover:shadow-soft-plane focus:shadow-soft-sagging font-muli">Sign In</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="w-4/5">
+            <header class="w-full h-2/12 flex justify-end">
+                <nav class="flex justify-between w-11/12 p-5 pt-3">
+                    <input class="search" type="search" placeholder="¿Hacemos algo por ti?">
+                    
+                    <div class="pt-2 px-3 text-center rounded-lg text-gray-700 font-muli">
+                        <div>
+                            <h2>Proveedores</h2>
+                        </div>
+                        <ul class="hidden mt-2">
+                            <li><a href="/">Registrarse</a></li>
+                            <li><a href="/">Iniciar Sesion</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        
+            <section class="p-24">
+                <button class="btn p-2 shadow-soft-hardSagging">Soy un boton</button>
+            </section>
+        
+            <footer>
+        
+            </footer>
+        </div>
+    </div>
+</body>
+
+<script>
+    const btn = document.getElementsByClassName('btn')
+    const lateral = document.getElementsByClassName('lateral')
+
+    function hidder(config) {
+        this.nav = config.el
+    }
+
+    hidder.prototype.touch = function() {
+        console.log(this.nav)
+        this.nav.contains('hidden')
+        ? this.nav.remove('hidden')    
+        : this.nav.add('hidden')
+        
+    }
+
+    const hola = new hidder({ el: lateral })
+
+    btn[0].onclick = () => hola.touch()
+    
+</script>
+
+</html>

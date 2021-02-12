@@ -1,0 +1,15 @@
+@tailwind base;
+
+@tailwind components;
+
+.search {
+    @apply h-10 w-120 text-base rounded-full text-center ml-16 px-5 bg-transparent font-muli shadow-soft-plane;
+}
+.search:hover {
+    @apply  shadow-soft-crater;
+}
+.search:focus {
+    @apply shadow-soft-sagging outline-none;
+}
+
+@tailwind utilities;
