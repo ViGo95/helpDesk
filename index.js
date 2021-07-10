@@ -15,7 +15,7 @@ database.connect(() => {
 router(app)
 
 app.use('/', express.static('public'))
-app.use('/experimental', express.static('public/experimental.html'))
+// app.use('/experimental', express.static('public/experimental.html'))
 
 server.listen(config.PORT, () => {
     console.log(`Server ready in: ${config.host}:${config.PORT}`)
